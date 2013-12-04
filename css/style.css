@@ -1,0 +1,84 @@
+body {
+  color: #333;
+  background-color: #444;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+body.active {
+  top: 1px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.swatch {
+  text-align: center;
+  font-size: 0.85em;
+  letter-spacing: 0.2em;
+  font-weight: normal;
+  padding-top: 20px;
+  color: #ddd;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  width: 23%;
+  height: 150px;
+  margin: 0 2% 10px 0;
+  float: left;
+  background-color: white;
+  word-wrap: break-word;
+}
+
+.swatch.active {
+  font-size: 1.3em;
+  width: 98%;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  position: fixed;
+  z-index: 2;
+  top: 5px;
+  left: 5px;
+  background-color: rgba(255,255,255,0.3);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.currentColor {
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: silver;
+  width: 180px;
+  height:20px;
+  outline: none;
+  margin-right: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    background-color: #666;
+    opacity: 1;
+    width: 10px;
+    height: 20px;
+}
+
+button {
+  background-color: #DDD;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  padding: 3px 7px;
+  font-size: 0.8em;
+  outline: none;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subtle Widgets</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/backgrounds.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SubtlePatterns with Transparency</h1>
+
+    <div class="controls">
+      <input class="colors" value="220" type="range" min="0" max="360" name="h"><label>Background</label><br>
+      <input class="colors" value="220" type="range" min="0" max="360" name="h"><label>Hue</label><br>
+      <input class="colors" value="50" type="range" min="0" max="100" name="s"><label>Sat</label><br>
+      <input class="colors" value="50" type="range" min="0" max="100" name="l"><label>Light</label><br>
+      <p class="currentColor"></p>
+    </div>
+
+    {{#swatches}}
+      <div class="sp-{{.}} swatch">{{.}}</div>
+    {{/swatches}}
+  </div>
+  <script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

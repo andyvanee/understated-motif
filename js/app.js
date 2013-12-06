@@ -11,20 +11,30 @@ $(function(){
         col = 'hsl('+h+','+s+'%,'+l+'%)';
 
     $('.swatch').css('background-color', col);
-    $('.currentColor').text(col);
+
     if ($(ev.currentTarget).attr('name') == 'b') {
       $('body').css('background-color', 'hsl(0,0%,'+b+'%)').toggleClass('active');
     }
   }
 
-  $('.toggleBG').click(function(){
-    $('body').toggleClass('light').toggleClass('dark');
-  })
+  var setCSS = function(){
+    var col = $('.swatch.active').css('background-color'),
+        bg = $('.swatch.active').css('background-image');
+
+    $('.current-color').text(col);
+
+    if (bg) {
+      bg = /img\/.*/.exec(bg)[0];
+      $('.current-bg').text(bg);
+    }
+  }
 
   $(".colors").change(setColor);
+
   $('input[name="b"]').trigger('change');
 
   $('.swatch').click(function(){
     $(this).toggleClass('active');
+    setCSS();
   });
 });

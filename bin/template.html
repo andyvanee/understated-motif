@@ -14,7 +14,10 @@
       <input class="colors" value="200" type="range" min="0" max="360" name="h"><label>Hue</label><br>
       <input class="colors" value="30" type="range" min="0" max="100" name="s"><label>Sat</label><br>
       <input class="colors" value="30" type="range" min="0" max="100" name="l"><label>Light</label><br>
-      <p class="currentColor"></p>
+      <pre class="bg-css" style="font-size: 0.7em;">
+background-color: <span class="current-color"></span>;
+background-image: url("<span class="current-bg"></span>");
+      </pre>
     </div>
 
     {{#swatches}}

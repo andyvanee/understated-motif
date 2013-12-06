@@ -3,16 +3,18 @@
 Borrowing patterns from <http://subtlepatterns.com>, I've made them
 semi-transparent and preview-able in the browser.
 
+Take it for a spin here: <http://andyvanee.github.io/understated-motif/>
+
 # Requirements
 
 To view the patterns, just open index.html.
 
-To rebuild with new ones, place your images at subtle-patterns/*/*.png and run
-`make`. Rebuilding requires imagemagick, optipng and mustache
+To rebuild with new patterns, place your images at
+subtle-patterns/whatever/*.png and run `make`. Rebuilding requires
+imagemagick, optipng and mustache
 
     brew install imagemagick optipng
     gem install mustache
-
 
 ## License
 
